@@ -1,0 +1,21 @@
+version: "3"
+services:
+  jenkins:
+    restart: always
+    container_name: ztlsir-jenkins
+    image: jenkins_with_docker
+    build: .
+    networks:
+      local_net:
+        ipv4_address: 172.18.0.2
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  local_net:
+    external:
+      name: lan

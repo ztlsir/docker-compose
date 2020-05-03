@@ -1,0 +1,30 @@
+Started by user [8mha:////4HS3CW4pzQSmhOc+rV3OB09AWSTqYWbHG79OP0PnjzscAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgZu/dLi1CL9xJTczDwA9svhPMAAAAA=[0mztlsir
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/homework
+using credential 5afe49a6-f2eb-4a6b-a223-aaae2c83f182
+ > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/ztlsir/Education.git # timeout=10
+Cleaning workspace
+ > /usr/bin/git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > /usr/bin/git reset --hard # timeout=10
+ > /usr/bin/git clean -ffdx # timeout=10
+Fetching upstream changes from https://github.com/ztlsir/Education.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress -- https://github.com/ztlsir/Education.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/ci^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/ci^{commit} # timeout=10
+Checking out Revision 23801fb0661c367453ead81a8a916d813675c16d (refs/remotes/origin/ci)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 23801fb0661c367453ead81a8a916d813675c16d # timeout=10
+Commit message: "change build depends on jacoco"
+ > /usr/bin/git rev-list --no-walk 23801fb0661c367453ead81a8a916d813675c16d # timeout=10
+[homework] $ /bin/sh -xe /tmp/jenkins658845414890594790.sh
++ ./homework/build.sh
+./homework/build.sh: 2: ./homework/build.sh: ./gradlew: not found
+Build step 'Execute shell' marked build as failure
+Publishing Coverage report....
+No reports were found
+Finished: FAILURE

@@ -1,0 +1,191 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@4.2.2">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/ci</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.2.1">
+              <sha1>6b0a72c7702f15e09adde88dbe34c827083ec1af</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/ci</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>23</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
+      <remoteUrls>
+        <string>https://github.com/ztlsir/Education.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@4.2.2">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/ci</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/jenkins_home/workspace/homework</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <io.jenkins.plugins.coverage.CoverageAction plugin="code-coverage-api@1.1.6">
+      <healthReport>
+        <score>100</score>
+        <iconClassName>icon-health-80plus</iconClassName>
+        <iconUrl>health-80plus.png</iconUrl>
+        <localizibleDescription>
+          <holder>
+            <owner>io.jenkins.plugins.coverage.Messages</owner>
+          </holder>
+          <key>CoverageProcessor.healthReportDescriptionTemplate</key>
+          <args>
+            <int>100</int>
+          </args>
+        </localizibleDescription>
+      </healthReport>
+    </io.jenkins.plugins.coverage.CoverageAction>
+    <io.jenkins.plugins.analysis.core.model.AggregationAction plugin="warnings-ng@8.1.0"/>
+    <io.jenkins.plugins.analysis.core.model.ResultAction plugin="warnings-ng@8.1.0">
+      <result>
+        <id>checkstyle</id>
+        <totals>
+          <totalErrorSize>0</totalErrorSize>
+          <totalHighSize>0</totalHighSize>
+          <totalNormalSize>0</totalNormalSize>
+          <totalLowSize>0</totalLowSize>
+          <newErrorSize>0</newErrorSize>
+          <newHighSize>0</newHighSize>
+          <newNormalSize>0</newNormalSize>
+          <newLowSize>0</newLowSize>
+          <deltaErrorSize>0</deltaErrorSize>
+          <deltaHighSize>0</deltaHighSize>
+          <deltaNormalSize>0</deltaNormalSize>
+          <deltaLowSize>0</deltaLowSize>
+          <fixedSize>0</fixedSize>
+          <totalSizeBySeverity>
+            <entry>
+              <edu.hm.hafner.analysis.Severity plugin="analysis-model-api@8.0.1">
+                <name>HIGH</name>
+              </edu.hm.hafner.analysis.Severity>
+              <int>0</int>
+            </entry>
+            <entry>
+              <edu.hm.hafner.analysis.Severity plugin="analysis-model-api@8.0.1">
+                <name>LOW</name>
+              </edu.hm.hafner.analysis.Severity>
+              <int>0</int>
+            </entry>
+            <entry>
+              <edu.hm.hafner.analysis.Severity plugin="analysis-model-api@8.0.1">
+                <name>ERROR</name>
+              </edu.hm.hafner.analysis.Severity>
+              <int>0</int>
+            </entry>
+            <entry>
+              <edu.hm.hafner.analysis.Severity plugin="analysis-model-api@8.0.1">
+                <name>NORMAL</name>
+              </edu.hm.hafner.analysis.Severity>
+              <int>0</int>
+            </entry>
+          </totalSizeBySeverity>
+          <newSizeBySeverity>
+            <entry>
+              <edu.hm.hafner.analysis.Severity reference="../../../totalSizeBySeverity/entry/edu.hm.hafner.analysis.Severity"/>
+              <int>0</int>
+            </entry>
+            <entry>
+              <edu.hm.hafner.analysis.Severity reference="../../../totalSizeBySeverity/entry[2]/edu.hm.hafner.analysis.Severity"/>
+              <int>0</int>
+            </entry>
+            <entry>
+              <edu.hm.hafner.analysis.Severity reference="../../../totalSizeBySeverity/entry[3]/edu.hm.hafner.analysis.Severity"/>
+              <int>0</int>
+            </entry>
+            <entry>
+              <edu.hm.hafner.analysis.Severity reference="../../../totalSizeBySeverity/entry[4]/edu.hm.hafner.analysis.Severity"/>
+              <int>0</int>
+            </entry>
+          </newSizeBySeverity>
+        </totals>
+        <sizePerOrigin>
+          <entry>
+            <string>checkstyle</string>
+            <int>0</int>
+          </entry>
+        </sizePerOrigin>
+        <errors/>
+        <messages>
+          <string>Ignoring &apos;aggregatingResults&apos; and ID &apos;null&apos; since only a single tool is defined.</string>
+          <string>Searching for all files in &apos;/var/jenkins_home/workspace/homework&apos; that match the pattern &apos;homework/build/reports/checkstyle/*.xml&apos;</string>
+          <string>-&gt; found 4 files</string>
+          <string>Successfully parsed file /var/jenkins_home/workspace/homework/homework/build/reports/checkstyle/apiTest.xml</string>
+          <string>-&gt; found 0 issues (skipped 0 duplicates)</string>
+          <string>Successfully parsed file /var/jenkins_home/workspace/homework/homework/build/reports/checkstyle/componentTest.xml</string>
+          <string>-&gt; found 0 issues (skipped 0 duplicates)</string>
+          <string>Successfully parsed file /var/jenkins_home/workspace/homework/homework/build/reports/checkstyle/main.xml</string>
+          <string>-&gt; found 0 issues (skipped 0 duplicates)</string>
+          <string>Successfully parsed file /var/jenkins_home/workspace/homework/homework/build/reports/checkstyle/test.xml</string>
+          <string>-&gt; found 0 issues (skipped 0 duplicates)</string>
+          <string>Skipping post processing</string>
+          <string>No filter has been set, publishing all 0 issues</string>
+          <string>No valid reference build found that meets the criteria (NO_JOB_FAILURE - SUCCESSFUL_QUALITY_GATE)</string>
+          <string>All reported issues will be considered outstanding</string>
+          <string>No quality gates have been set - skipping</string>
+          <string>Health report is disabled - skipping</string>
+          <string>Created analysis result for 0 issues (found 0 new issues, fixed 0 issues)</string>
+          <string>Attaching ResultAction with ID &apos;checkstyle&apos; to run &apos;homework #23&apos;.</string>
+        </messages>
+        <referenceBuildId></referenceBuildId>
+        <noIssuesSinceBuild>21</noIssuesSinceBuild>
+        <successfulSinceBuild>-1</successfulSinceBuild>
+        <qualityGateStatus>INACTIVE</qualityGateStatus>
+        <sizePerSeverity/>
+        <newSizePerSeverity/>
+      </result>
+      <healthDescriptor>
+        <healthy>0</healthy>
+        <unhealthy>0</unhealthy>
+        <minimumSeverity reference="../../result/totals/totalSizeBySeverity/entry[2]/edu.hm.hafner.analysis.Severity"/>
+      </healthDescriptor>
+      <id>checkstyle</id>
+      <name></name>
+      <charset>UTF-8</charset>
+      <trendChartType>AGGREGATION_TOOLS</trendChartType>
+    </io.jenkins.plugins.analysis.core.model.ResultAction>
+  </actions>
+  <queueId>24</queueId>
+  <timestamp>1588473984733</timestamp>
+  <startTime>1588473984745</startTime>
+  <result>SUCCESS</result>
+  <duration>289314</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/homework</workspace>
+  <hudsonVersion>2.222.3</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@4.2.2">
+    <authorOrCommitter>false</authorOrCommitter>
+    <showEntireCommitSummaryInChanges>true</showEntireCommitSummaryInChanges>
+  </scm>
+  <culprits class="com.google.common.collect.RegularImmutableSortedSet">
+    <string>admin</string>
+  </culprits>
+</build>

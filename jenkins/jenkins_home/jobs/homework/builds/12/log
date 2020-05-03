@@ -1,0 +1,42 @@
+Started by user [8mha:////4HS3CW4pzQSmhOc+rV3OB09AWSTqYWbHG79OP0PnjzscAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgZu/dLi1CL9xJTczDwA9svhPMAAAAA=[0mztlsir
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/homework
+using credential 5afe49a6-f2eb-4a6b-a223-aaae2c83f182
+ > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/ztlsir/Education.git # timeout=10
+Fetching upstream changes from https://github.com/ztlsir/Education.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress -- https://github.com/ztlsir/Education.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/ci^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/ci^{commit} # timeout=10
+Checking out Revision 23801fb0661c367453ead81a8a916d813675c16d (refs/remotes/origin/ci)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 23801fb0661c367453ead81a8a916d813675c16d # timeout=10
+Commit message: "change build depends on jacoco"
+ > /usr/bin/git rev-list --no-walk c5fd2dba41677f98d9d965922b74a08c18d53e6e # timeout=10
+[homework] $ /bin/sh -xe /tmp/jenkins181860806493869619.sh
++ ./homework/gradlew build
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Task :buildEnvironment
+
+------------------------------------------------------------
+Root project
+------------------------------------------------------------
+
+classpath
+No dependencies
+
+A web-based, searchable dependency report is available by adding the --scan option.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.3/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 11s
+1 actionable task: 1 executed
+Publishing Coverage report....
+No reports were found
+Finished: SUCCESS
