@@ -1,0 +1,48 @@
+Started by user [8mha:////4HS3CW4pzQSmhOc+rV3OB09AWSTqYWbHG79OP0PnjzscAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgZu/dLi1CL9xJTczDwA9svhPMAAAAA=[0mztlsir
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/homework
+using credential 5afe49a6-f2eb-4a6b-a223-aaae2c83f182
+ > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/ztlsir/Education.git # timeout=10
+Fetching upstream changes from https://github.com/ztlsir/Education.git
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --progress -- https://github.com/ztlsir/Education.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/ci^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/ci^{commit} # timeout=10
+Checking out Revision 6b0a72c7702f15e09adde88dbe34c827083ec1af (refs/remotes/origin/ci)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 6b0a72c7702f15e09adde88dbe34c827083ec1af # timeout=10
+Commit message: "Merge pull request #7 from ztlsir/master"
+ > /usr/bin/git rev-list --no-walk 6b0a72c7702f15e09adde88dbe34c827083ec1af # timeout=10
+[homework] $ /bin/sh -xe /tmp/jenkins1571089956716408856.sh
+Publishing Coverage report....
+A total of 1 reports were found
+Code coverage enforcement failed: Line coverage in Report level 'homework: jacocoAllTestReport.xml' is lower than 90.00 stable threshold
+Build step 'Publish Coverage Report' changed build result to UNSTABLE
+[CheckStyle] Searching for all files in '/var/jenkins_home/workspace/homework' that match the pattern 'homework/build/reports/checkstyle/*.xml'
+[CheckStyle] -> found 4 files
+[CheckStyle] Successfully parsed file /var/jenkins_home/workspace/homework/homework/build/reports/checkstyle/apiTest.xml
+[CheckStyle] -> found 0 issues (skipped 0 duplicates)
+[CheckStyle] Successfully parsed file /var/jenkins_home/workspace/homework/homework/build/reports/checkstyle/componentTest.xml
+[CheckStyle] -> found 0 issues (skipped 0 duplicates)
+[CheckStyle] Successfully parsed file /var/jenkins_home/workspace/homework/homework/build/reports/checkstyle/main.xml
+[CheckStyle] -> found 0 issues (skipped 0 duplicates)
+[CheckStyle] Successfully parsed file /var/jenkins_home/workspace/homework/homework/build/reports/checkstyle/test.xml
+[CheckStyle] -> found 0 issues (skipped 0 duplicates)
+[CheckStyle] Skipping post processing
+[CheckStyle] No filter has been set, publishing all 0 issues
+[CheckStyle] Using reference build 'homework #39' to compute new, fixed, and outstanding issues
+[CheckStyle] Issues delta (vs. reference build): outstanding: 0, new: 0, fixed: 0
+[CheckStyle] No quality gates have been set - skipping
+[CheckStyle] Health report is disabled - skipping
+[CheckStyle] Created analysis result for 0 issues (found 0 new issues, fixed 0 issues)
+[CheckStyle] Attaching ResultAction with ID 'checkstyle' to run 'homework #42'.
+SSH: Connecting from host [3383990d72dc]
+SSH: Connecting with configuration [server_1] ...
+SSH: EXEC: STDOUT/STDERR from command [kill -9 $(netstat -nlp | grep :803 | awk '{print $7}' | awk -F"/" '{ print $1 }') && nohup /usr/java/openjdk-15/bin/java -jar /root/springboot/homework-0.0.1-SNAPSHOT.jar --server.port=803  > log_homework.file 2>&1 &] ...
+SSH: Disconnecting configuration [server_1] ...
+ERROR: Exception when publishing, exception message [Exec timed out or was interrupted after 14,472 ms]
+Build step 'Send build artifacts over SSH' changed build result to FAILURE
+Finished: FAILURE

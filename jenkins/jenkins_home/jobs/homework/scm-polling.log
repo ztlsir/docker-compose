@@ -1,0 +1,11 @@
+Started on May 4, 2020 3:38:55 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision 6b0a72c7702f15e09adde88dbe34c827083ec1af (refs/remotes/origin/ci)
+using credential 5afe49a6-f2eb-4a6b-a223-aaae2c83f182
+ > /usr/bin/git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git ls-remote -h -- https://github.com/ztlsir/Education.git # timeout=10
+Found 2 remote heads on https://github.com/ztlsir/Education.git
+[poll] Latest remote head revision on refs/heads/ci is: 6b0a72c7702f15e09adde88dbe34c827083ec1af - already built by 52
+Done. Took 2.3 sec
+No changes

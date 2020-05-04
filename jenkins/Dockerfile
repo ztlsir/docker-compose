@@ -1,5 +1,7 @@
 FROM jenkins/jenkins:lts
 
+COPY ./ssh/ /root/.ssh/
+
 USER root
 
 RUN apt-get update \
