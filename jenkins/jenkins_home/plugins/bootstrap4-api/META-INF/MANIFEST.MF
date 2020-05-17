@@ -2,17 +2,17 @@ Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
 Created-By: Apache Maven
 Built-By: hafner
-Build-Jdk: 1.8.0_242
+Build-Jdk: 1.8.0_252
 Extension-Name: bootstrap4-api
 Specification-Title: Provides Bootstrap 4 for Jenkins plugins.
 Implementation-Title: bootstrap4-api
-Implementation-Version: 4.4.1-13
+Implementation-Version: 4.4.1-15
 Group-Id: io.jenkins.plugins
 Short-Name: bootstrap4-api
 Long-Name: Bootstrap 4 API Plugin
 Url: https://github.com/jenkinsci/bootstrap4-api-plugin
 Minimum-Java-Version: 1.8
-Plugin-Version: 4.4.1-13
+Plugin-Version: 4.4.1-15
 Hudson-Version: 2.204.4
 Jenkins-Version: 2.204.4
 Plugin-Dependencies: font-awesome-api:5.13.0-1,jquery3-api:3.4.1-10,po

@@ -4,8 +4,8 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.5">
-      <projectUrl>https://github.com/ztlsir/Education/</projectUrl>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.30.0">
+      <projectUrl>https://github.com/ztlsir/education.homework/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -13,7 +13,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/ztlsir/Education.git</url>
+        <url>https://github.com/ztlsir/education.homework.git</url>
         <credentialsId>5afe49a6-f2eb-4a6b-a223-aaae2c83f182</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -43,14 +43,14 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd homework &amp;&amp; ./gradlew -Pprofile=ci clean build</command>
+      <command>./gradlew -Pprofile=ci clean build</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <io.jenkins.plugins.coverage.CoveragePublisher plugin="code-coverage-api@1.1.6">
       <adapters>
         <io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
-          <path>homework/build/reports/jacoco/jacocoAllTestReport/jacocoAllTestReport.xml</path>
+          <path>build/reports/jacoco/jacocoAllTestReport/jacocoAllTestReport.xml</path>
           <mergeToOneReport>true</mergeToOneReport>
           <thresholds>
             <io.jenkins.plugins.coverage.threshold.Threshold>
@@ -78,7 +78,7 @@
         <io.jenkins.plugins.analysis.warnings.checkstyle.CheckStyle>
           <id></id>
           <name></name>
-          <pattern>homework/build/reports/checkstyle/*.xml</pattern>
+          <pattern>build/reports/checkstyle/*.xml</pattern>
           <reportEncoding></reportEncoding>
           <skipSymbolicLinks>false</skipSymbolicLinks>
         </io.jenkins.plugins.analysis.warnings.checkstyle.CheckStyle>
@@ -112,9 +112,9 @@
             <transfers>
               <jenkins.plugins.publish__over__ssh.BapSshTransfer>
                 <remoteDirectory>/springboot</remoteDirectory>
-                <sourceFiles>homework/build/libs/homework-0.0.1-SNAPSHOT.jar</sourceFiles>
+                <sourceFiles>build/libs/homework-0.0.1-SNAPSHOT.jar</sourceFiles>
                 <excludes></excludes>
-                <removePrefix>homework/build/libs/</removePrefix>
+                <removePrefix>build/libs/</removePrefix>
                 <remoteDirectorySDF>false</remoteDirectorySDF>
                 <flatten>false</flatten>
                 <cleanRemote>true</cleanRemote>

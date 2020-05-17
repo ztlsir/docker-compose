@@ -5,18 +5,19 @@ services:
     container_name: ztlsir-server
     image: java_server
     build: .
-    # command:
-    #   - /bin/bash
-    #   - -c
-    #   - |
-    #    /usr/sbin/sshd
+    command:
+      - /bin/bash
+      - -c
+      - |
+       /usr/sbin/sshd
+       tail -f /dev/null
     networks:
       local_net:
         ipv4_address: 172.18.0.4
     volumes:
       - ./springboot:/root/springboot
     ports:
-      - 803:803
+      - 1803:803
     tty: true
 
 networks:
