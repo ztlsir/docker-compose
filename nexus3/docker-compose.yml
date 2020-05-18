@@ -1,0 +1,19 @@
+version: "3"
+services:
+  nexus3:
+    restart: always
+    container_name: ztlsir-nexus3
+    image: sonatype/nexus3
+    networks:
+      local_net:
+        ipv4_address: 172.18.0.5
+    volumes:
+      - ./nexus-data:/nexus-data
+    ports:
+      - 1001:8081
+    tty: true
+
+networks:
+  local_net:
+    external:
+      name: lan

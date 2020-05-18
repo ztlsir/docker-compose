@@ -1,0 +1,86 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.ztlsir",
+    "module": "education-homework-api",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "qsgadx67jjfk5gbwt7xh7uq4t4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "education-homework-api-0.0.1-SNAPSHOT.jar",
+          "url": "education-homework-api-0.0.1-SNAPSHOT.jar",
+          "size": 12632,
+          "sha512": "0cc8ec4284229ab6fb14b08f65caea30797bff5352c2205ecdf30782c35e0d24f991e269f8ed6803d6b675a28463e13fa7b7ff2613d5af50957e7cb223966903",
+          "sha256": "ec28bc28c1fe6f4687147e52c66dd15e70754f9179e23ad1371c56579fa2b277",
+          "sha1": "d963108f75a8614bbeccbe5298f580d0986a9eb2",
+          "md5": "0686a6a4b867b4c653df988190d9be91"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "excludes": [
+            {
+              "group": "org.apache.tomcat",
+              "module": "tomcat-annotations-api"
+            }
+          ]
+        },
+        {
+          "group": "com.google.guava",
+          "module": "guava",
+          "version": {
+            "requires": "27.1-jre"
+          },
+          "excludes": [
+            {
+              "group": "org.apache.tomcat",
+              "module": "tomcat-annotations-api"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "education-homework-api-0.0.1-SNAPSHOT.jar",
+          "url": "education-homework-api-0.0.1-SNAPSHOT.jar",
+          "size": 12632,
+          "sha512": "0cc8ec4284229ab6fb14b08f65caea30797bff5352c2205ecdf30782c35e0d24f991e269f8ed6803d6b675a28463e13fa7b7ff2613d5af50957e7cb223966903",
+          "sha256": "ec28bc28c1fe6f4687147e52c66dd15e70754f9179e23ad1371c56579fa2b277",
+          "sha1": "d963108f75a8614bbeccbe5298f580d0986a9eb2",
+          "md5": "0686a6a4b867b4c653df988190d9be91"
+        }
+      ]
+    }
+  ]
+}
