@@ -1,0 +1,19 @@
+version: "3"
+services:
+  nexus3:
+    restart: always
+    container_name: ztlsir-rabbitmq
+    image: rabbitmq:management
+    networks:
+      local_net:
+        ipv4_address: 172.18.0.7
+    ports:
+    - '15672:15672'
+    - '5672:5672'
+    volumes:
+      - ./data:/var/lib/rabbitmq
+
+networks:
+  local_net:
+    external:
+      name: lan

@@ -8,7 +8,7 @@ services:
       local_net:
         ipv4_address: 172.18.1.4
     volumes:
-      - ./jar:/root/springboot
+      - ./jar/eureka-1:/root/springboot
     ports:
       - 1803:80
     tty: true
@@ -20,7 +20,7 @@ services:
       local_net:
         ipv4_address: 172.18.1.5
     volumes:
-      - ./jar:/root/springboot
+      - ./jar/eureka-2:/root/springboot
     ports:
       - 1806:80
     tty: true
@@ -32,7 +32,7 @@ services:
       local_net:
         ipv4_address: 172.18.1.6
     volumes:
-      - ./jar:/root/springboot
+      - ./jar/eureka-3:/root/springboot
     ports:
       - 1807:80
     tty: true

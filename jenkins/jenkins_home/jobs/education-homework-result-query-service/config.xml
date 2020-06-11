@@ -43,7 +43,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>./gradlew -Pprofile=ci clean build</command>
+      <command>./gradlew clean build --info</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -66,7 +66,7 @@
                 <noDefaultExcludes>false</noDefaultExcludes>
                 <makeEmptyDirs>false</makeEmptyDirs>
                 <patternSeparator>[, ]+</patternSeparator>
-                <execCommand>nohup /usr/java/openjdk-15/bin/java -jar /root/springboot/education-homework-result-query-service-0.0.1-SNAPSHOT.jar --server.port=80  &gt; log_homework.file 2&gt;&amp;1 &amp;</execCommand>
+                <execCommand>nohup /usr/java/openjdk-15/bin/java -jar -Dspring.profiles.active=ci /root/springboot/education-homework-result-query-service-0.0.1-SNAPSHOT.jar --server.port=80  &gt; log_homework.file 2&gt;&amp;1 &amp;</execCommand>
                 <execTimeout>120000</execTimeout>
                 <usePty>false</usePty>
                 <useAgentForwarding>false</useAgentForwarding>

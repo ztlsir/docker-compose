@@ -1,5 +1,44 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson.model.Queue_-State>
-  <counter>4</counter>
-  <items/>
+  <counter>18</counter>
+  <items>
+    <hudson.model.Queue_-BlockedItem>
+      <actions>
+        <hudson.model.CauseAction>
+          <causeBag class="linked-hash-map">
+            <entry>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>admin</userId>
+              </hudson.model.Cause_-UserIdCause>
+              <int>1</int>
+            </entry>
+          </causeBag>
+        </hudson.model.CauseAction>
+      </actions>
+      <id>18</id>
+      <task class="hudson.model.FreeStyleProject">education-zuul</task>
+      <inQueueSince>1590070494184</inQueueSince>
+      <buildableStartMilliseconds>1590070494212</buildableStartMilliseconds>
+      <outer-class>queue</outer-class>
+    </hudson.model.Queue_-BlockedItem>
+    <hudson.model.Queue_-BuildableItem>
+      <actions>
+        <hudson.model.CauseAction>
+          <causeBag class="linked-hash-map">
+            <entry>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>admin</userId>
+              </hudson.model.Cause_-UserIdCause>
+              <int>1</int>
+            </entry>
+          </causeBag>
+        </hudson.model.CauseAction>
+      </actions>
+      <id>17</id>
+      <task class="hudson.model.FreeStyleProject">education-homework-service</task>
+      <inQueueSince>1590070490957</inQueueSince>
+      <buildableStartMilliseconds>1590070490966</buildableStartMilliseconds>
+      <isPending>false</isPending>
+    </hudson.model.Queue_-BuildableItem>
+  </items>
 </hudson.model.Queue_-State>

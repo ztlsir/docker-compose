@@ -1,7 +1,0 @@
-Started on May 21, 2020 12:40:03 PM
-Using strategy: Default
-[poll] Last Built Revision: Revision d1f2096c3cbf3b54fb80440d6c1b30d3af08c298 (refs/remotes/origin/master)
-using credential 5afe49a6-f2eb-4a6b-a223-aaae2c83f182
- > /usr/bin/git --version # timeout=10
-using GIT_ASKPASS to set credentials 
- > /usr/bin/git ls-remote -h -- https://github.com/ztlsir/education.homework-result-query-service.git # timeout=10

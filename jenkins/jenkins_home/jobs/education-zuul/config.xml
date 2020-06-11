@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.30.0">
-      <projectUrl>https://github.com/ztlsir/education.eureka/</projectUrl>
+      <projectUrl>https://github.com/ztlsir/education.zuul/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -13,7 +13,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/ztlsir/education.eureka.git</url>
+        <url>https://github.com/ztlsir/education.zuul.git</url>
         <credentialsId>5afe49a6-f2eb-4a6b-a223-aaae2c83f182</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -57,7 +57,7 @@
             <transfers>
               <jenkins.plugins.publish__over__ssh.BapSshTransfer>
                 <remoteDirectory>/springboot</remoteDirectory>
-                <sourceFiles>build/libs/education-eureka-0.0.1-SNAPSHOT.jar</sourceFiles>
+                <sourceFiles>build/libs/education-zuul-0.0.1-SNAPSHOT.jar</sourceFiles>
                 <excludes></excludes>
                 <removePrefix>build/libs/</removePrefix>
                 <remoteDirectorySDF>false</remoteDirectorySDF>
@@ -66,55 +66,7 @@
                 <noDefaultExcludes>false</noDefaultExcludes>
                 <makeEmptyDirs>false</makeEmptyDirs>
                 <patternSeparator>[, ]+</patternSeparator>
-                <execCommand>nohup /usr/java/openjdk-15/bin/java -jar /root/springboot/education-eureka-0.0.1-SNAPSHOT.jar --server.port=80  &gt; log_homework.file 2&gt;&amp;1 &amp;</execCommand>
-                <execTimeout>120000</execTimeout>
-                <usePty>false</usePty>
-                <useAgentForwarding>false</useAgentForwarding>
-              </jenkins.plugins.publish__over__ssh.BapSshTransfer>
-            </transfers>
-            <useWorkspaceInPromotion>false</useWorkspaceInPromotion>
-            <usePromotionTimestamp>false</usePromotionTimestamp>
-          </jenkins.plugins.publish__over__ssh.BapSshPublisher>
-          <jenkins.plugins.publish__over__ssh.BapSshPublisher plugin="publish-over-ssh@1.20.1">
-            <configName>education-eureka-2</configName>
-            <verbose>false</verbose>
-            <transfers>
-              <jenkins.plugins.publish__over__ssh.BapSshTransfer>
-                <remoteDirectory>/springboot</remoteDirectory>
-                <sourceFiles>build/libs/education-eureka-0.0.1-SNAPSHOT.jar</sourceFiles>
-                <excludes></excludes>
-                <removePrefix>build/libs/</removePrefix>
-                <remoteDirectorySDF>false</remoteDirectorySDF>
-                <flatten>false</flatten>
-                <cleanRemote>true</cleanRemote>
-                <noDefaultExcludes>false</noDefaultExcludes>
-                <makeEmptyDirs>false</makeEmptyDirs>
-                <patternSeparator>[, ]+</patternSeparator>
-                <execCommand>nohup /usr/java/openjdk-15/bin/java -jar /root/springboot/education-eureka-0.0.1-SNAPSHOT.jar --server.port=80  &gt; log_homework.file 2&gt;&amp;1 &amp;</execCommand>
-                <execTimeout>120000</execTimeout>
-                <usePty>false</usePty>
-                <useAgentForwarding>false</useAgentForwarding>
-              </jenkins.plugins.publish__over__ssh.BapSshTransfer>
-            </transfers>
-            <useWorkspaceInPromotion>false</useWorkspaceInPromotion>
-            <usePromotionTimestamp>false</usePromotionTimestamp>
-          </jenkins.plugins.publish__over__ssh.BapSshPublisher>
-          <jenkins.plugins.publish__over__ssh.BapSshPublisher plugin="publish-over-ssh@1.20.1">
-            <configName>education-eureka-3</configName>
-            <verbose>false</verbose>
-            <transfers>
-              <jenkins.plugins.publish__over__ssh.BapSshTransfer>
-                <remoteDirectory>/springboot</remoteDirectory>
-                <sourceFiles>build/libs/education-eureka-0.0.1-SNAPSHOT.jar</sourceFiles>
-                <excludes></excludes>
-                <removePrefix>build/libs/</removePrefix>
-                <remoteDirectorySDF>false</remoteDirectorySDF>
-                <flatten>false</flatten>
-                <cleanRemote>false</cleanRemote>
-                <noDefaultExcludes>false</noDefaultExcludes>
-                <makeEmptyDirs>false</makeEmptyDirs>
-                <patternSeparator>[, ]+</patternSeparator>
-                <execCommand>nohup /usr/java/openjdk-15/bin/java -jar /root/springboot/education-eureka-0.0.1-SNAPSHOT.jar --server.port=80  &gt; log_homework.file 2&gt;&amp;1 &amp;</execCommand>
+                <execCommand>nohup /usr/java/openjdk-15/bin/java -jar -Dspring.profiles.active=ci /root/springboot/education-zuul-0.0.1-SNAPSHOT.jar --server.port=80  &gt; log_homework.file 2&gt;&amp;1 &amp;</execCommand>
                 <execTimeout>120000</execTimeout>
                 <usePty>false</usePty>
                 <useAgentForwarding>false</useAgentForwarding>
@@ -138,55 +90,7 @@
         <delegate plugin="publish-over@0.22">
           <publishers>
             <jenkins.plugins.publish__over__ssh.BapSshPublisher plugin="publish-over-ssh@1.20.1">
-              <configName>education-eureka-1</configName>
-              <verbose>false</verbose>
-              <transfers>
-                <jenkins.plugins.publish__over__ssh.BapSshTransfer>
-                  <remoteDirectory></remoteDirectory>
-                  <sourceFiles></sourceFiles>
-                  <excludes></excludes>
-                  <removePrefix></removePrefix>
-                  <remoteDirectorySDF>false</remoteDirectorySDF>
-                  <flatten>false</flatten>
-                  <cleanRemote>false</cleanRemote>
-                  <noDefaultExcludes>false</noDefaultExcludes>
-                  <makeEmptyDirs>false</makeEmptyDirs>
-                  <patternSeparator>[, ]+</patternSeparator>
-                  <execCommand>kill -9 $(netstat -nlp | grep :80 | awk &apos;{print $7}&apos; | awk -F&quot;/&quot; &apos;{ print $1 }&apos;)</execCommand>
-                  <execTimeout>120000</execTimeout>
-                  <usePty>false</usePty>
-                  <useAgentForwarding>false</useAgentForwarding>
-                </jenkins.plugins.publish__over__ssh.BapSshTransfer>
-              </transfers>
-              <useWorkspaceInPromotion>false</useWorkspaceInPromotion>
-              <usePromotionTimestamp>false</usePromotionTimestamp>
-            </jenkins.plugins.publish__over__ssh.BapSshPublisher>
-            <jenkins.plugins.publish__over__ssh.BapSshPublisher plugin="publish-over-ssh@1.20.1">
-              <configName>education-eureka-2</configName>
-              <verbose>false</verbose>
-              <transfers>
-                <jenkins.plugins.publish__over__ssh.BapSshTransfer>
-                  <remoteDirectory></remoteDirectory>
-                  <sourceFiles></sourceFiles>
-                  <excludes></excludes>
-                  <removePrefix></removePrefix>
-                  <remoteDirectorySDF>false</remoteDirectorySDF>
-                  <flatten>false</flatten>
-                  <cleanRemote>false</cleanRemote>
-                  <noDefaultExcludes>false</noDefaultExcludes>
-                  <makeEmptyDirs>false</makeEmptyDirs>
-                  <patternSeparator>[, ]+</patternSeparator>
-                  <execCommand>kill -9 $(netstat -nlp | grep :80 | awk &apos;{print $7}&apos; | awk -F&quot;/&quot; &apos;{ print $1 }&apos;)</execCommand>
-                  <execTimeout>120000</execTimeout>
-                  <usePty>false</usePty>
-                  <useAgentForwarding>false</useAgentForwarding>
-                </jenkins.plugins.publish__over__ssh.BapSshTransfer>
-              </transfers>
-              <useWorkspaceInPromotion>false</useWorkspaceInPromotion>
-              <usePromotionTimestamp>false</usePromotionTimestamp>
-            </jenkins.plugins.publish__over__ssh.BapSshPublisher>
-            <jenkins.plugins.publish__over__ssh.BapSshPublisher plugin="publish-over-ssh@1.20.1">
-              <configName>education-eureka-3</configName>
+              <configName>education-zuul</configName>
               <verbose>false</verbose>
               <transfers>
                 <jenkins.plugins.publish__over__ssh.BapSshTransfer>

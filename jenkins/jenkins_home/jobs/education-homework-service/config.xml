@@ -43,14 +43,14 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>./gradlew -Pprofile=ci clean build</command>
+      <command>./gradlew -Pprofile=ci clean :education-homework-service:build</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <io.jenkins.plugins.coverage.CoveragePublisher plugin="code-coverage-api@1.1.6">
       <adapters>
         <io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
-          <path>build/reports/jacoco/jacocoAllTestReport/jacocoAllTestReport.xml</path>
+          <path>education-homework-service/build/reports/jacoco/jacocoAllTestReport/jacocoAllTestReport.xml</path>
           <mergeToOneReport>true</mergeToOneReport>
           <thresholds>
             <io.jenkins.plugins.coverage.threshold.Threshold>
@@ -78,7 +78,7 @@
         <io.jenkins.plugins.analysis.warnings.checkstyle.CheckStyle>
           <id></id>
           <name></name>
-          <pattern>build/reports/checkstyle/*.xml</pattern>
+          <pattern>education-homework-service/build/reports/checkstyle/*.xml</pattern>
           <reportEncoding></reportEncoding>
           <skipSymbolicLinks>false</skipSymbolicLinks>
         </io.jenkins.plugins.analysis.warnings.checkstyle.CheckStyle>
@@ -112,16 +112,16 @@
             <transfers>
               <jenkins.plugins.publish__over__ssh.BapSshTransfer>
                 <remoteDirectory>/springboot</remoteDirectory>
-                <sourceFiles>build/libs/homework-0.0.1-SNAPSHOT.jar</sourceFiles>
+                <sourceFiles>education-homework-service/build/libs/homework-0.0.1-SNAPSHOT.jar</sourceFiles>
                 <excludes></excludes>
-                <removePrefix>build/libs/</removePrefix>
+                <removePrefix>education-homework-service/build/libs/</removePrefix>
                 <remoteDirectorySDF>false</remoteDirectorySDF>
                 <flatten>false</flatten>
                 <cleanRemote>true</cleanRemote>
                 <noDefaultExcludes>false</noDefaultExcludes>
                 <makeEmptyDirs>false</makeEmptyDirs>
                 <patternSeparator>[, ]+</patternSeparator>
-                <execCommand>nohup /usr/java/openjdk-15/bin/java -jar /root/springboot/homework-0.0.1-SNAPSHOT.jar --server.port=80  &gt; log_homework.file 2&gt;&amp;1 &amp;</execCommand>
+                <execCommand>nohup /usr/java/openjdk-15/bin/java -jar -Dspring.profiles.active=ci /root/springboot/homework-0.0.1-SNAPSHOT.jar --server.port=80  &gt; log_homework.file 2&gt;&amp;1 &amp;</execCommand>
                 <execTimeout>120000</execTimeout>
                 <usePty>false</usePty>
                 <useAgentForwarding>false</useAgentForwarding>

@@ -1,0 +1,26 @@
+version: "3"
+services:
+  nexus3:
+    restart: always
+    container_name: ztlsir-gitlab
+    image: gitlab/gitlab-ce:latest
+    hostname: 'localhost'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://localhost:8929'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2224
+    networks:
+      local_net:
+        ipv4_address: 172.18.0.6
+    ports:
+    - '8929:8929'
+    - '2224:22'
+    volumes:
+    - ./config:/etc/gitlab
+    - ./logs:/var/log/gitlab
+    - ./data:/var/opt/gitlab
+
+networks:
+  local_net:
+    external:
+      name: lan

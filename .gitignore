@@ -1,1 +1,13 @@
 **/database/
+**/log/
+**/logs/
+**/cache/
+
+nexus3/nexus-data/blobs/default/content/
+jenkins/jenkins_home/jobs/**/builds/
+rabbitmq/data/mnesia/**/quorum
+
+**/*.log
+**/*.LOG
+
+service/**/jar/**/*.jar
