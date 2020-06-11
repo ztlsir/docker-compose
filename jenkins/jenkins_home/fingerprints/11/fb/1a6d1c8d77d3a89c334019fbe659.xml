@@ -5,8 +5,20 @@
   <fileName>Credential id=5afe49a6-f2eb-4a6b-a223-aaae2c83f182 name=584821699@qq.com/******</fileName>
   <usages>
     <entry>
+      <string>education-homework-service</string>
+      <ranges>55-58</ranges>
+    </entry>
+    <entry>
       <string>homework</string>
       <ranges>1-55</ranges>
+    </entry>
+    <entry>
+      <string>education-homework-result-query-service</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>education-zuul</string>
+      <ranges>1-2</ranges>
     </entry>
   </usages>
   <facets/>

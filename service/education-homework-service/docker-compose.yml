@@ -1,0 +1,54 @@
+version: "3"
+services:
+  education-homework-service:
+    restart: always
+    container_name: education-homework-service
+    image: java_server
+    networks:
+      local_net:
+        ipv4_address: 172.18.1.2
+    volumes:
+      - ./jar:/root/springboot
+    ports:
+      - 1802:80
+    tty: true
+  education-homework-service-mongodb:
+    restart: always
+    container_name: education-homework-service-mongodb
+    image: mongo
+    networks:
+      local_net:
+        ipv4_address: 172.18.2.2
+    ports:
+      - 27117:27017
+    environment:
+      MONGO_INITDB_DATABASE: file
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    volumes:
+      - ./mongo/initdb/:/docker-entrypoint-initdb.d/:ro
+      - ./mongo/database:/data/db
+  education-homework-service-mysqldb:
+    restart: always
+    container_name: education-homework-service-mysqldb
+    image: mysql
+    command: [
+      '--character-set-server=utf8mb4',
+      '--collation-server=utf8mb4_unicode_ci',
+      '--default-time-zone=+8:00',
+    ]
+    networks:
+      local_net:
+        ipv4_address: 172.18.3.2
+    ports:
+      - 3316:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - ./mysql/initdb/:/docker-entrypoint-initdb.d/:ro
+      - ./mysql/database:/var/lib/mysql
+
+networks:
+  local_net:
+    external:
+      name: lan

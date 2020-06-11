@@ -1,0 +1,19 @@
+version: "3"
+services:
+  education-homework-result-query-service:
+    restart: always
+    container_name: education-homework-result-query-service
+    image: java_server
+    networks:
+      local_net:
+        ipv4_address: 172.18.1.3
+    volumes:
+      - ./jar:/root/springboot
+    ports:
+      - 1804:80
+    tty: true
+
+networks:
+  local_net:
+    external:
+      name: lan

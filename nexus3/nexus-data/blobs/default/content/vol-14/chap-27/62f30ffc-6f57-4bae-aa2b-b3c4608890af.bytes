@@ -1,0 +1,122 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.ztlsir",
+    "module": "education-homework-api",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "362ziyr4irhmtpfwqeq6mid2ii"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "education-homework-api-0.0.1-SNAPSHOT.jar",
+          "url": "education-homework-api-0.0.1-SNAPSHOT.jar",
+          "size": 12704,
+          "sha512": "2651941ae4c6c9eaa82159422fbe7900df7b10b4b33da2b8ed296aae733d76c4f82df5805a9287cb8bdac897fc4594e3379059b241cce4e543eac8025c727c2c",
+          "sha256": "12bfca64c8cb65484ca300a46855c87ea6146d8bfc39420904cdf98c796aff1b",
+          "sha1": "02d5561c607ed4f1288a90d56502a5fe600bd56c",
+          "md5": "9468e7304ddeff67d847a3e796cec531"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "excludes": [
+            {
+              "group": "org.apache.tomcat",
+              "module": "tomcat-annotations-api"
+            },
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        },
+        {
+          "group": "com.google.guava",
+          "module": "guava",
+          "version": {
+            "requires": "27.1-jre"
+          },
+          "excludes": [
+            {
+              "group": "org.apache.tomcat",
+              "module": "tomcat-annotations-api"
+            },
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        },
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter-openfeign",
+          "excludes": [
+            {
+              "group": "org.apache.tomcat",
+              "module": "tomcat-annotations-api"
+            },
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-validation",
+          "excludes": [
+            {
+              "group": "org.apache.tomcat",
+              "module": "tomcat-annotations-api"
+            },
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "education-homework-api-0.0.1-SNAPSHOT.jar",
+          "url": "education-homework-api-0.0.1-SNAPSHOT.jar",
+          "size": 12704,
+          "sha512": "2651941ae4c6c9eaa82159422fbe7900df7b10b4b33da2b8ed296aae733d76c4f82df5805a9287cb8bdac897fc4594e3379059b241cce4e543eac8025c727c2c",
+          "sha256": "12bfca64c8cb65484ca300a46855c87ea6146d8bfc39420904cdf98c796aff1b",
+          "sha1": "02d5561c607ed4f1288a90d56502a5fe600bd56c",
+          "md5": "9468e7304ddeff67d847a3e796cec531"
+        }
+      ]
+    }
+  ]
+}

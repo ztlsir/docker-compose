@@ -1,0 +1,43 @@
+version: "3"
+services:
+  education-eureka-1:
+    restart: always
+    container_name: education-eureka-1
+    image: java_server
+    networks:
+      local_net:
+        ipv4_address: 172.18.1.4
+    volumes:
+      - ./jar:/root/springboot
+    ports:
+      - 1803:80
+    tty: true
+  education-eureka-2:
+    restart: always
+    container_name: education-eureka-2
+    image: java_server
+    networks:
+      local_net:
+        ipv4_address: 172.18.1.5
+    volumes:
+      - ./jar:/root/springboot
+    ports:
+      - 1806:80
+    tty: true
+  education-eureka-3:
+    restart: always
+    container_name: education-eureka-3
+    image: java_server
+    networks:
+      local_net:
+        ipv4_address: 172.18.1.6
+    volumes:
+      - ./jar:/root/springboot
+    ports:
+      - 1807:80
+    tty: true
+
+networks:
+  local_net:
+    external:
+      name: lan

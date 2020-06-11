@@ -1,0 +1,19 @@
+version: "3"
+services:
+  education-zuul:
+    restart: always
+    container_name: education-zuul
+    image: java_server
+    networks:
+      local_net:
+        ipv4_address: 172.18.1.7
+    volumes:
+      - ./jar:/root/springboot
+    ports:
+      - 1805:80
+    tty: true
+
+networks:
+  local_net:
+    external:
+      name: lan
